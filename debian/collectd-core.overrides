@@ -11,7 +11,3 @@ collectd-core: capitalization-error-in-description python Python
 # directory. According to the Java guys the path name and the ABI is stable
 # though ...
 collectd-core: binary-or-shlib-defines-rpath usr/lib/collectd/java.so /usr/lib/jvm/java-6-openjdk/jre/lib/*
-
-# dpatch is obsolete but we can't deprecated it yet to avoid
-# a big diff to Debian's "upstream" package
-collectd source: build-depends-on-obsolete-package dpatch

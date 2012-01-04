@@ -1,0 +1,3 @@
+# dpatch is obsolete but we can't deprecate it yet as
+# we want to avoid a big diff to Debian's "upstream" package
+collectd source: build-depends-on-obsolete-package dpatch
