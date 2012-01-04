@@ -14,4 +14,4 @@ collectd-core: binary-or-shlib-defines-rpath usr/lib/collectd/java.so /usr/lib/j
 
 # dpatch is obsolete but we can't deprecated it yet to avoid
 # diff to upstream
-collectd: build-depends-on-obsolete-package dpatch
+collectd source: build-depends-on-obsolete-package build-depends: dpatch
