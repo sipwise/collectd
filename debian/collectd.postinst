@@ -19,11 +19,24 @@ set -e
 
 if [ -x "/etc/init.d/collectd" ]; then
 	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
-		invoke-rc.d collectd restart || exit $?
+		invoke-rc.d collectd restart || true
 	else
-		/etc/init.d/collectd restart || exit $?
+		/etc/init.d/collectd restart || true
 	fi
 fi
+
+# the init script waits for MAXWAIT (as defined in /etc/default/collectd),
+# if the process is still running then this might break our upgrade process,
+# so try to clean up then...
+for pidfile in /var/run/collectd.pid /var/run/collectdmon.pid ; do
+  if [ -r "$pidfile" ] ; then
+    PID=$(cat "$pidfile" 2>/dev/null) || true
+    if [ -n "$PID" ] ; then
+      echo "Force killing collectd process (${PID})"
+      kill -9 "$PID" || true
+    fi
+  fi
+done
 
 # replace the directory provided by older versions of the package with a
 # symlink; dpkg does not handle that according to policy 6.6
