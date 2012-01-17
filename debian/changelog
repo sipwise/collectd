@@ -1,3 +1,15 @@
+collectd (4.10.1-1+squeeze2.2) testing-proposed-updates; urgency=low
+
+  * Add bts619123_fix_unresolvable_symlink.dpatch to address
+    collectd hanging / consuming CPU in endless loop if
+    /var/lib/collectd/rrd is an unresolvable symlink (see #619123)
+  * postinst: try to force kill collectd process and be more relaxed
+    about failing service restarts
+  * Provide debian/source.lintian-overrides and update
+    debian/collectd-core.overrides to make lintian happy
+
+ -- Michael Prokop <mprokop@sipwise.com>  Tue, 17 Jan 2012 01:24:08 +0100
+
 collectd (4.10.1-1+squeeze2.1) testing-proposed-updates; urgency=low
 
   * Integrate patch by Sebastian Harl <sh@tokkee.org>, Collectd.pm:
