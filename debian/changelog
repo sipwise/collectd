@@ -1,11 +1,9 @@
-collectd (4.10.1-1+squeeze2.2+0~mr3.3) unstable; urgency=low
+collectd (4.10.1-2+squeeze2.2) testing-proposed-updates; urgency=low
 
   [ Michael Prokop ]
   * [d0f09f1] Bump Standards-Version to 3.9.3
 
-  [ Sipwise Jenkins Builder ]
-
- -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Sat, 01 Feb 2014 19:38:16 +0100
+ -- Alexander Lutay <alutay@sipwise.com>  Fri, 14 Mar 2014 12:28:13 +0100
 
 collectd (4.10.1-1+squeeze2.2) testing-proposed-updates; urgency=low
 
