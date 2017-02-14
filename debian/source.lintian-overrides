@@ -1,4 +1,0 @@
-# dpatch is obsolete but we can't deprecate it yet as
-# we want to avoid a big diff to Debian's "upstream" package;
-# has been forwarded to upstream [sh@tokee.org] on 2012-01-05 by Michael Prokop
-collectd source: build-depends-on-obsolete-package build-depends: dpatch

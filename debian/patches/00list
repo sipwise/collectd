@@ -1,9 +1,0 @@
-rrd_filter_path.dpatch
-collection_conf_path.dpatch
-bts559801_plugin_find_fix.dpatch
-bts595756-notify_email-segfault.dpatch
-bts592623-curl_json-file.dpatch
-bts596128-reheap-fix.dpatch
-CVE-2010-4336.dpatch
-fix_missing_dataset_type_in_plugin.patch
-bts619123_fix_unresolvable_symlink.dpatch
